@@ -1,5 +1,4 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: [
@@ -9,16 +8,38 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.lightBlue,
-        secondary: colors.orange,
-        accent: colors.purple,
+        primary: {
+          DEFAULT: '#000000',
+          light: '#333333',
+          dark: '#000000',
+        },
+        secondary: {
+          DEFAULT: '#FFFFFF',
+          light: '#FFFFFF',
+          dark: '#F5F5F5',
+        },
+        accent1: {
+          DEFAULT: '#FFD1DC',
+          light: '#FFE5ED',
+          dark: '#FFBDCB',
+        },
+        accent2: {
+          DEFAULT: '#BDFCC9',
+          light: '#D6FDE0',
+          dark: '#A4FBB2',
+        },
+        accent3: {
+          DEFAULT: '#CAF1DE',
+          light: '#E0F8EB',
+          dark: '#B4EAD1',
+        },
         background: {
           light: '#FFFFFF',
-          dark: '#F7F7F7',
+          dark: '#F0F0F0',
         },
         text: {
-          light: '#4A4A4A',
-          dark: '#2A2A2A',
+          light: '#666666',
+          dark: '#333333',
         },
       },
       fontFamily: {
@@ -26,11 +47,9 @@ module.exports = {
         heading: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        ...defaultTheme.fontSize,
         '5xl': '3rem',
       },
       borderRadius: {
-        ...defaultTheme.borderRadius,
         'md': '0.375rem',
       },
     },

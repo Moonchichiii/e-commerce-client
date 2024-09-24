@@ -1,50 +1,130 @@
-# React + TypeScript + Vite
+# TypeScript E-commerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My first e-commerce project built with TypeScript, React, and Tailwind CSS, using Zustand for state management.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Key Features](#-key-features)
+- [Tech Stack](#️-tech-stack)
+- [Project Planning](#-project-planning)
+- [Mock-ups and Design](#-mock-ups-and-design)
+- [Quick Start](#-quick-start)
+- [Project Structure](#-project-structure)
+- [Development](#-development)
+- [Testing](#-testing)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Key Features
+- Responsive design with Tailwind CSS
+- Product listing with search and category filtering
+- Interactive product cards
+- Simple and efficient state management with Zustand
 
-## Expanding the ESLint configuration
+## 📅 Project Planning
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<details>
+  <summary>Project Planning</summary>
+  
+  
+</details>
 
-- Configure the top-level `parserOptions` property like this:
+[Back to top](#table-of-contents)  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🎨 Mock-ups and Design
+
+<details>
+  <summary>Mock-ups and Design</summary>
+  
+  
+</details>
+
+[Back to top](#table-of-contents)  
+
+## 🛠️ Tech Stack
+- TypeScript
+- React
+- Tailwind CSS
+- Zustand
+- Vite
+- React Router
+- Lucide React (for icons)
+
+[Back to top](#table-of-contents)  
+
+## 🏁 Quick Start
+```bash
+git clone https://github.com/Moonchichiii/e-commerce-client.git
+cd e-commerce-client
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## 📁 Project Structure
 ```
+src/
+├── components/      # Reusable UI components
+├── pages/           # Main view components
+├── hooks/           # Custom React hooks
+├── store/           # Zustand store configurations
+└── styles/          # Global styles and Tailwind config
+```
+
+## 🔧 Development
+- Use `npm run build` to create a production build
+- Run `npm run lint` to check for linting issues
+
+[Back to top](#table-of-contents)  
+
+## 🧪 Testing
+
+- ES Lint testing 
+<details>
+  <summary>ES Lint testing</summary>
+  
+  
+</details>
+
+- HTML Validation
+<details>
+  <summary>HTML Validation</summary>
+  
+  
+</details>
+
+- CSS Validation
+<details>
+  <summary>CSS Validation</summary>
+  
+  
+</details>
+
+- Lighthouse Performance
+<details>
+  <summary>Lighthouse Performance</summary>
+  
+  
+</details>
+
+- Accessibility Checks
+<details>
+  <summary>Accessibility Checks</summary>
+  
+  
+</details>
+
+- Contrast Ratio Compliance
+<details>
+  <summary>Contrast Ratio Compliance</summary>
+  
+  
+</details>
+
+[Back to top](#table-of-contents)  
+
+## 🤝 Contributing
+As this is my first e-commerce project, I'm open to suggestions and improvements. Feel free to open issues or submit pull requests!
+
+## 📝 License
+This project is open source and available under the [MIT License](LICENSE).
+
+[Back to top](#table-of-contents)

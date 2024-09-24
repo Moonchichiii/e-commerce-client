@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { X } from 'lucide-react';
 
 interface ToastProps {
   message: string;
@@ -13,18 +14,24 @@ const Toast: React.FC<ToastProps> = ({ message, type, onClose }) => {
     const timer = setTimeout(() => {
       setIsVisible(false);
       onClose();
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [onClose]);
 
   if (!isVisible) return null;
 
-  const bgColor = type === 'success' ? 'bg-green-500' : type === 'error' ? 'bg-red-500' : 'bg-blue-500';
+  const bgColor = 
+    type === 'success' ? 'bg-accent2' : 
+    type === 'error' ? 'bg-accent1' : 
+    'bg-accent3';
 
   return (
-    <div className={`fixed top-4 right-4 ${bgColor} text-white px-4 py-2 rounded shadow-lg`}>
-      {message}
+    <div className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 ${bgColor} text-primary px-6 py-3 rounded-full shadow-lg flex items-center`}>
+      <span className="mr-4">{message}</span>
+      <button onClick={onClose} className="text-primary hover:text-primary-light transition-colors duration-300">
+        <X size={20} />
+      </button>
     </div>
   );
 };
