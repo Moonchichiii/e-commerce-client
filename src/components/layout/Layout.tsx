@@ -2,19 +2,20 @@ import React, { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import useAuthStore from '../../store/authStore';
 
-interface LayoutProps {
-  isAuthenticated: boolean;
-}
+const Layout: FC = () => {
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
-const Layout: FC<LayoutProps> = ({ isAuthenticated }) => (
-  <div className="min-h-screen flex flex-col bg-background-light">
-    <Header isAuthenticated={isAuthenticated} />
-    <main className="flex-grow container mx-auto px-4 py-8">
-      <Outlet />
-    </main>
-    <Footer />
-  </div>
-);
+  return (
+    <div className="min-h-screen flex flex-col bg-background-light">
+      <Header isAuthenticated={isAuthenticated} />
+      <main className="flex-grow container mx-auto px-4 py-8">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 export default Layout;
